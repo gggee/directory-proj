@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добавление нового пользователя</title>
+</head>
+<body>
+    <h1>Добавить нового пользователя</h1>
+    <form id="addUserForm">
+        <label for="full_name">ФИО: </label>
+        <input type="text" id="full_name" required><br>
+
+        <label for="login">Логин: </label>
+        <input type="text" id="login" required><br>
+
+        <label for="password">Пароль: </label>
+        <input type="password" id="password" required><br>
+        <button type="button" id="togglePassword">Показать пароль</button><br>
+
+        <p id="passwordRequirements" style="color: gray; font-size: 0.9em;">
+            Пароль должен содержать минимум 8 символов, одну заглавную букву, одну цифру и один специальный знак.
+        </p>
+
+        <label for="role_id">Роль: </label>
+        <select id="role_id" required>
+            <option value="1">Администратор</option>
+            <option value="2">Пользователь</option>
+            <option value="3">Модератор</option>
+            <option value="4">Менеджер</option>
+            <option value="5">Разработчик</option>
+            <option value="6">Тестировщик</option>
+            <option value="7">Дизайнер</option>
+            <option value="8">Системный администратор</option>
+            <option value="9">HR</option>
+        </select><br>
+        <button type="submit">Сохранить</button>
+    </form>
+
+    <script src="../scripts/add_user.js"></script>
+</body>
+</html>
