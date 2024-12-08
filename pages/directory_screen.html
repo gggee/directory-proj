@@ -16,13 +16,14 @@
                 <th>ФИО</th>
                 <th>Логин</th>
                 <th>Роль</th>
+                <th>Статус</th>
                 <th>Действия</th>
             </tr>
         </thead>
         <tbody></tbody>
     </table>
 
-    <!-- Модальное окно -->
+    <!-- Модальное окно для редактирования -->
     <div id="editModal" class="modal" style="display: none;">
         <div class="modalBlock">
             <h2>Редактировать пользователя</h2>
@@ -46,6 +47,35 @@
                 </select><br>
                 <button type="submit">Сохранить изменения</button>
                 <button type="button" onclick="closeEditModal()">Отмена</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Модальное окно блокировки -->
+    <div id="blockModal" class="modal" style="display: none;">
+        <div class="modalBlock">
+            <h2>Заблокировать пользователя</h2>
+            <form id="blockUserForm">
+                <input type="hidden" id="blockUserId">
+                <label for="blockHours">Часы блокировки:</label>
+                <input type="number" id="blockHours" required><br>
+                
+                <label for="blockReason">Причина блокировки:</label>
+                <select id="blockReason" required>
+                    <option value="Нарушение правил">Нарушение правил</option>
+                    <option value="Нарушение безопасности">Нарушение безопасности</option>
+                    <option value="Неактивность">Неактивность</option>
+                    <option value="Другое">Другое</option>
+                </select><br>
+
+                <!-- Поле для ввода причины -->
+                <div id="otherReasonBlock" style="display: none;">
+                    <label for="otherReason">Укажите причину:</label>
+                    <input type="text" id="otherReason" placeholder="Введите причину вручную" /><br>
+                </div>
+
+                <button type="submit">Заблокировать</button>
+                <button type="button" onclick="closeBlockModal()">Отмена</button>
             </form>
         </div>
     </div>
