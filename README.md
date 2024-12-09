@@ -12,4 +12,7 @@
 - **Frontend**: HTML, CSS и JavaScript для взаимодействия с сервером.
 - **Backend**: PHP сервер с использованием MySQL для хранения данных пользователей.
 
-![Скриншот интерфейса] (img/directoryPage-img.png)
+![Скриншот интерфейса]
+<div style="display: flex; gap: 10px;">
+  <img src="img/directoryPage-img.png" alt="directory page" width="550" height="400">
+</div>
