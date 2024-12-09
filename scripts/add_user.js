@@ -64,7 +64,7 @@ form.addEventListener('submit', async function (e) {
         const res = await resp.json();
         if (res.success) {
             alert('Пользователь успешно добавлен');
-            window.location.href = 'directory_screen.html'; 
+            window.location.href = 'index.html'; 
         } else {
             alert('Ошибка при добавлении пользователя: ' + (res.message || 'Неизвестная ошибка'));
         }
