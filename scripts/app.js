@@ -12,7 +12,7 @@ async function getUsers() {
         users_table.innerHTML = '';
         users.forEach(user => {
             const row = document.createElement('tr');
-            const ban_status = user.status;
+            const ban_status = user.status; 
             row.innerHTML = `
                 <td>${user.id}</td>
                 <td>${user.full_name}</td>
@@ -20,9 +20,10 @@ async function getUsers() {
                 <td>${user.role_name}</td>
                 <td>${ban_status}</td>
                 <td>
-                    <button class="edit-btn" onclick="editUser(${user.id})">Редактировать</button>
-                    <button class="block-btn" onclick="blockUser(${user.id})">Заблокировать</button>
+                    <button class="btn edit-btn" onclick="editUser(${user.id})">Редактировать</button>
+                    <button class="btn block-btn" onclick="blockUser(${user.id})">Заблокировать</button>
                 </td>
+
             `;
             users_table.appendChild(row);
         });
@@ -45,7 +46,7 @@ async function editUser(userId) {
         document.getElementById('editFullName').value = user.full_name;
         document.getElementById('editLogin').value = user.login;
         document.getElementById('editRole').value = user.role_id;
-        document.getElementById('editModal').style.display = 'block';
+        document.getElementById('editModal').style.display = 'flex';
     } catch (err) {
         console.error('Ошибка при получении данных пользователя:', err);
     }
@@ -85,14 +86,14 @@ document.getElementById('editUserForm').addEventListener('submit', async functio
 //Функция для бана
 async function blockUser(userId) {
     document.getElementById('blockUserId').value = userId;
-    document.getElementById('blockModal').style.display = 'block';
+    document.getElementById('blockModal').style.display = 'flex';
 }
 
 //Для отображения ввода причины
 document.getElementById('blockReason').addEventListener('change', function() {
     const other_reason_block = document.getElementById('otherReasonBlock');
     if (this.value === 'Другое') {
-        other_reason_block.style.display = 'block';
+        other_reason_block.style.display = 'flex';
     } else {
         other_reason_block.style.display = 'none';
     }

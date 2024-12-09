@@ -7,8 +7,11 @@
     <link rel="stylesheet" href="../styles/styles.css">
 </head>
 <body>
-    <h1>Справочник пользователей</h1>
-    <button onclick="window.location.href='add_user.html'">Создать нового пользователя</button>
+    <div class="header-container">
+        <h1>Пользователи</h1>
+        <button class="btn createUserBtn" onclick="window.location.href='add_user.html'">Создать нового пользователя</button>
+    </div>
+
     <table id="usersTable">
         <thead>
             <tr>
@@ -23,18 +26,17 @@
         <tbody></tbody>
     </table>
 
-    <!-- Модальное окно для редактирования -->
     <div id="editModal" class="modal" style="display: none;">
         <div class="modalBlock">
             <h2>Редактировать пользователя</h2>
             <form id="editUserForm">
                 <input type="hidden" id="editUserId">
                 <label for="editFullName">ФИО:</label>
-                <input type="text" id="editFullName" required><br>
+                <input type="text" id="editFullName" class="modalInput" required><br>
                 <label for="editLogin">Логин:</label>
-                <input type="text" id="editLogin" required><br>
+                <input type="text" id="editLogin" class="modalInput" required><br>
                 <label for="editRole">Роль:</label>
-                <select id="editRole" required>
+                <select id="editRole" class="modalInput" required>
                     <option value="1">Администратор</option>
                     <option value="2">Пользователь</option>
                     <option value="3">Модератор</option>

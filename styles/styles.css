@@ -1,23 +1,180 @@
 body {
-    font-family: Arial, sans-serif;
-    padding: 20px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
 }
 
-h1, h2 {
-    margin-bottom: 10px;
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 80px;
 }
 
+h1 {
+    color: #7d6bcd;  
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+}
+
+/* Таблица */
 table {
-    width: 100%;
+    width: 90%;
+    margin: 20px auto 40px;  
     border-collapse: collapse;
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 th, td {
-    padding: 8px;
+    padding: 12px 15px;
     text-align: left;
-    border: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-form {
-    margin-top: 20px;
+th {
+    background-color: #ffffff;
+    color: #c2c7ca;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+td:last-child {
+    text-align: center;
+}
+
+button {
+    background-color: #7d6bcd;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+button:hover {
+    background-color: #6756b3;
+}
+
+button:active {
+    background-color: #5745a2;
+}
+.createUserBtn {
+    background-color: #7d6bcd;  
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.createUserBtn:hover {
+    background-color: #6756b3;
+}
+
+.edit-btn, .block-btn {
+    background-color: #7d6bcd;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-right: 10px;
+}
+
+.edit-btn {
+    background-color: #7d6bcd;
+}
+
+.edit-btn:hover {
+    background-color: #45a049;
+}
+
+.edit-btn:active {
+    background-color: #388e3c;
+}
+.block-btn {
+    background-color: #7d6bcd;
+}
+
+.block-btn:hover {
+    background-color: #c0392b;
+}
+
+.block-btn:active {
+    background-color: #a93226;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Центрирование по вертикали и горизонтали */
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    z-index: 1000; 
+    box-sizing: border-box; 
+}
+
+.modalBlock {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    width: 90%;
+    max-width: 500px;
+    animation: fadeIn 0.3s ease-in-out;
+    box-sizing: border-box; 
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1); 
+    }
+}
+
+.modalBlock h2 {
+    color: #7d6bcd;
+    margin-bottom: 20px;
+}
+
+.modalBlock form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.modalBlock form .modalInput {
+    width: calc(100% - 20px);
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+#otherReasonBlock {
+    margin-top: 10px;
 }
