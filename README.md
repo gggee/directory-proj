@@ -16,3 +16,14 @@
 <div style="display: flex; gap: 10px;">
   <img src="img/directoryPage-img.png" alt="directory page" width="550" height="400">
 </div>
+
+![Модальное окно блокировки и редактирования]
+<div style="display: flex; gap: 10px;">
+  <img src="img/blockUser_img.png" alt="block user" width="550" height="400">
+  <img src="img/editUser-img.png" alt="edit user" width="550" height="400">
+</div>
+
+![Добавление пользователя]
+<div style="display: flex; gap: 10px;">
+  <img src="img/addUser-img.png" alt="add user" width="550" height="400">
+</div>
